@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+src/mcp_midi_writer/__init__.py
+src/mcp_midi_writer/__main__.py
+src/mcp_midi_writer/server.py
+src/mcp_midi_writer.egg-info/PKG-INFO
+src/mcp_midi_writer.egg-info/SOURCES.txt
+src/mcp_midi_writer.egg-info/dependency_links.txt
+src/mcp_midi_writer.egg-info/entry_points.txt
+src/mcp_midi_writer.egg-info/requires.txt
+src/mcp_midi_writer.egg-info/top_level.txt
