@@ -1,7 +1,9 @@
 """MCP MIDI Writer package."""
 
 __version__ = "0.1.0"
-__all__ = ["main"]
+__all__ = ["main", "generate_midi_core", "list_roles_core", "list_section_templates_core"]
+
+from .server import generate_midi_core, list_roles_core, list_section_templates_core, main
 
 
 def main() -> None:

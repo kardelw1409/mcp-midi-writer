@@ -67,20 +67,56 @@ SCALE_INTERVALS = {
 }
 
 
-@mcp.tool()
+@mcp.tool("list_roles")
 def list_roles() -> list[str]:
+    return list_roles_core()
+
+
+def list_roles_core() -> list[str]:
     """Returns supported musical roles."""
     return ROLE_LIST
 
 
-@mcp.tool()
+@mcp.tool("list_section_templates")
 def list_section_templates() -> list[str]:
+    return list_section_templates_core()
+
+
+def list_section_templates_core() -> list[str]:
     """Returns supported section archetypes."""
     return SECTION_LIST
 
 
-@mcp.tool()
+@mcp.tool("generate_midi")
 def generate_midi(
+    role: str,
+    section: str,
+    bars: int,
+    tempo: float,
+    time_signature: str,
+    scale: str,
+    root_note: str,
+    style_tags: list[str] | None,
+    rhythmic_density: str,
+    output_path: str,
+    seed: int | None = None,
+) -> dict:
+    return generate_midi_core(
+        role=role,
+        section=section,
+        bars=bars,
+        tempo=tempo,
+        time_signature=time_signature,
+        scale=scale,
+        root_note=root_note,
+        style_tags=style_tags,
+        rhythmic_density=rhythmic_density,
+        output_path=output_path,
+        seed=seed,
+    )
+
+
+def generate_midi_core(
     role: str,
     section: str,
     bars: int,
